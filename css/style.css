@@ -21,6 +21,7 @@ body{
 .btn{
     width: 70px;
     height: 70px;
+    padding: 0px;
     margin: auto;
     border-radius: 50%;
     border: none;
@@ -34,4 +35,18 @@ body{
 
 .btn:focus{
     outline: 4px solid#83E584;
+}
+
+.code{background: url(../svg/code-solid.svg);}
+.globe{background: url(../svg/globe-solid.svg);}
+.music{background: url(../svg/music-solid.svg);}
+.user{background: url(../svg/user-solid.svg);}
+.clock{background: url(../svg/clock-solid.svg);}
+
+.icon{
+    width: 44px;
+    height: 44px;
+    margin: 13px;
+    background-size: 44px 44px;
+    background-position: center;
 }
