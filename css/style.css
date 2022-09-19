@@ -56,6 +56,7 @@ body{
 
 .menu{
     position: absolute;
+    /* display: none; */
     margin-top: 25px;
     margin-left: 10px;
     background: white;
@@ -83,6 +84,17 @@ body{
 .rain{background: url(../svg/cloud-rain-solid.svg) center/cover;}
 .thunder{background: url(../svg/cloud-bolt-solid.svg) center/cover;}
 .snow{background: url(../svg/snowflake-solid.svg) center/cover;}
+.git{background: url(../svg/github.svg) center/cover;}
+.twitter{background: url(../svg/twitter.svg) center/cover;}
+.telegram{background: url(../svg/telegram.svg) center/cover;}
+.instagram{background: url(../svg/instagram.svg) center/cover;}
+.angular{background: url(../svg/angular.svg) center/cover;}
+.guitar{background: url(../svg/guitar-solid.svg) center/cover;}
+.drums{background: url(../svg/drum-solid.svg) center/cover;}
+.html{background: url(../svg/html5.svg) center/cover;}
+.css{background: url(../svg/css3-alt.svg) center/cover;}
+.js{background: url(../svg/square-js.svg) center/cover;}
+.python{background: url(../svg/python.svg) center/cover;}
 
 .menuicon{
     width: 30px;
