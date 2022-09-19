@@ -22,7 +22,9 @@ btns.forEach(btn => {
     menus1.forEach(menu1 => {
         menu1.addEventListener('click', () => {
             var menuicon = menu1.querySelector('.menuicon');
-            console.log(menuicon.background);
+            var icon = btn.querySelector('.icon');
+            icon.classList.remove(icon.classList[1]);
+            icon.classList.add(menuicon.classList[1]);
         });
     });
 });

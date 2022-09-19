@@ -45,6 +45,26 @@ body{
 .music{background: url(../svg/music-solid.svg);}
 .user{background: url(../svg/user-solid.svg);}
 .umbrella{background: url(../svg/umbrella-solid.svg);}
+.bicycle{background: url(../svg/bicycle-solid.svg) center/cover;}
+.bus{background: url(../svg/bus-solid.svg) center/cover;}
+.car{background: url(../svg/car-side-solid.svg) center/cover;}
+.plane{background: url(../svg/plane-solid.svg) center/cover;}
+.sun{background: url(../svg/sun-solid.svg) center/cover;}
+.cloud{background: url(../svg/cloud-solid.svg) center/cover;}
+.rain{background: url(../svg/cloud-rain-solid.svg) center/cover;}
+.thunder{background: url(../svg/cloud-bolt-solid.svg) center/cover;}
+.snow{background: url(../svg/snowflake-solid.svg) center/cover;}
+.git{background: url(../svg/github.svg) center/cover;}
+.twitter{background: url(../svg/twitter.svg) center/cover;}
+.telegram{background: url(../svg/telegram.svg) center/cover;}
+.instagram{background: url(../svg/instagram.svg) center/cover;}
+.angular{background: url(../svg/angular.svg) center/cover;}
+.guitar{background: url(../svg/guitar-solid.svg) center/cover;}
+.drums{background: url(../svg/drum-solid.svg) center/cover;}
+.html{background: url(../svg/html5.svg) center/cover;}
+.css{background: url(../svg/css3-alt.svg) center/cover;}
+.js{background: url(../svg/square-js.svg) center/cover;}
+.python{background: url(../svg/python.svg) center/cover;}
 
 .icon{
     width: 44px;
@@ -80,27 +100,6 @@ body{
     box-sizing: border-box;
     background-color: rgb(181, 181, 181);
 }
-
-.bicycle{background: url(../svg/bicycle-solid.svg) center/cover;}
-.bus{background: url(../svg/bus-solid.svg) center/cover;}
-.car{background: url(../svg/car-side-solid.svg) center/cover;}
-.plane{background: url(../svg/plane-solid.svg) center/cover;}
-.sun{background: url(../svg/sun-solid.svg) center/cover;}
-.cloud{background: url(../svg/cloud-solid.svg) center/cover;}
-.rain{background: url(../svg/cloud-rain-solid.svg) center/cover;}
-.thunder{background: url(../svg/cloud-bolt-solid.svg) center/cover;}
-.snow{background: url(../svg/snowflake-solid.svg) center/cover;}
-.git{background: url(../svg/github.svg) center/cover;}
-.twitter{background: url(../svg/twitter.svg) center/cover;}
-.telegram{background: url(../svg/telegram.svg) center/cover;}
-.instagram{background: url(../svg/instagram.svg) center/cover;}
-.angular{background: url(../svg/angular.svg) center/cover;}
-.guitar{background: url(../svg/guitar-solid.svg) center/cover;}
-.drums{background: url(../svg/drum-solid.svg) center/cover;}
-.html{background: url(../svg/html5.svg) center/cover;}
-.css{background: url(../svg/css3-alt.svg) center/cover;}
-.js{background: url(../svg/square-js.svg) center/cover;}
-.python{background: url(../svg/python.svg) center/cover;}
 
 .menuicon{
     width: 30px;
