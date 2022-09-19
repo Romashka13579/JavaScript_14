@@ -2,6 +2,7 @@ var btns = document.querySelectorAll('.btn');
 var menus = document.querySelectorAll('.menu');
 
 var i = 1;
+var focuss = false;
 
 btns.forEach(btn => {
 
@@ -11,10 +12,14 @@ btns.forEach(btn => {
     btn.addEventListener('focus', () => {
         menu.style.display = "block";
         triangle.style.display = "block";
+        var text = btn.querySelector(".text");
+        text.style.display = "none";
+        focuss = true;
     });
     btn.addEventListener('focusout', () => {
         menu.style.display = "none";
         triangle.style.display = "none";
+        focuss = false;
     });
 
     var menus1 = btn.querySelectorAll('.menu-1');
@@ -26,5 +31,15 @@ btns.forEach(btn => {
             icon.classList.remove(icon.classList[1]);
             icon.classList.add(menuicon.classList[1]);
         });
+    });
+    btn.addEventListener('mouseover', () => {
+        if(focuss == false){
+            var text = btn.querySelector(".text");
+            text.style.display = "flex";
+        }
+    });
+    btn.addEventListener('mouseout', () => {
+        var text = btn.querySelector(".text");
+        text.style.display = "none";
     });
 });

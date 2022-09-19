@@ -123,3 +123,27 @@ body{
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     background: white;
 }
+
+.text{
+    position: absolute;
+    height: 40px;
+    margin-top: -60px;
+    border-radius: 15px;
+    background: white;
+    display: none;
+    align-items: center;
+}
+.hovertext{
+    font-size: 20px;
+    margin: 0px 10px;
+}
+
+.triangle-top{
+    position: absolute;
+    margin-top: 55px;
+    margin-left: 27.5px;
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    background: white;
+}
