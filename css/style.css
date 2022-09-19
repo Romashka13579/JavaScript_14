@@ -2,6 +2,7 @@ body{
     background: rgb(152, 230, 186);
     margin: 0px;
 }
+
 .main{
     display: flex;
     width: 100%;
@@ -9,6 +10,7 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+
 .dropdown-menu{
     display: flex;
     width: 70vw;
@@ -19,6 +21,7 @@ body{
     justify-content: space-around;
     align-items: center;
 }
+
 .btn{
     width: 70px;
     height: 70px;
@@ -41,7 +44,7 @@ body{
 .globe{background: url(../svg/globe-solid.svg);}
 .music{background: url(../svg/music-solid.svg);}
 .user{background: url(../svg/user-solid.svg);}
-.clock{background: url(../svg/clock-solid.svg);}
+.umbrella{background: url(../svg/umbrella-solid.svg);}
 
 .icon{
     width: 44px;
@@ -49,4 +52,56 @@ body{
     margin: 13px;
     background-size: 44px 44px;
     background-position: center;
+}
+
+.menu{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 10px;
+    background: white;
+    border-radius: 15px;
+}
+
+.menu-1{
+    display: flex;
+    flex-direction: row;
+}
+
+.line{
+    height: 0.7px;
+    width: auto;
+    box-sizing: border-box;
+    background-color: rgb(181, 181, 181);
+}
+
+.bicycle{background: url(../svg/bicycle-solid.svg) center/cover;}
+.bus{background: url(../svg/bus-solid.svg) center/cover;}
+.car{background: url(../svg/car-side-solid.svg) center/cover;}
+.plane{background: url(../svg/plane-solid.svg) center/cover;}
+.sun{background: url(../svg/sun-solid.svg) center/cover;}
+.cloud{background: url(../svg/cloud-solid.svg) center/cover;}
+.rain{background: url(../svg/cloud-rain-solid.svg) center/cover;}
+.thunder{background: url(../svg/cloud-bolt-solid.svg) center/cover;}
+.snow{background: url(../svg/snowflake-solid.svg) center/cover;}
+
+.menuicon{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    background-size: 30px 30px;
+}
+
+.menutxt{
+    font-size: 20px;
+    margin: auto 10px auto 0px;
+}
+
+.triangle{
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 17.5px;
+    width: 15px;
+    height: 15px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background: white;
 }
