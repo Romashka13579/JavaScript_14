@@ -27,9 +27,12 @@ btns.forEach(btn => {
     menus1.forEach(menu1 => {
         menu1.addEventListener('click', () => {
             var menuicon = menu1.querySelector('.menuicon');
+            var menutxt = menu1.querySelector('.menutxt-1');
+            var hovertext = btn.querySelector('.hovertext');
             var icon = btn.querySelector('.icon');
             icon.classList.remove(icon.classList[1]);
             icon.classList.add(menuicon.classList[1]);
+            hovertext.innerHTML = menutxt.innerHTML;
         });
     });
     btn.addEventListener('mouseover', () => {
