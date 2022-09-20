@@ -47,8 +47,8 @@ btns.forEach(btn => {
     });
 });
 
-var dropdownsFull = document.querySelectorAll('.dropdown-full');
-var dropdownsOverflow = document.querySelectorAll('.dropdown-overflow');
+
+
 var btnsblocks = document.querySelectorAll('.btn-block');
 
 var focusout = false;
@@ -64,17 +64,56 @@ btnsblocks.forEach(btnsblock => {
     dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
     btn2.addEventListener('focus', () => {
         focusout = false;
-        dropdownOverflow.style.zIndex = 1;
-        dropdownFull.style.top = "0px";
+        dropdownOverflow.style.display = "flex";
+        setTimeout(() => {
+            dropdownFull.style.top = "0px";
+        }, 10);
     });
-    console.log(dropdownFull.style.transition);
     btn2.addEventListener('focusout', () => {
         focusout = true;
         dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
-    });
-    dropdownFull.addEventListener('transitionend', (e) => {
         if(focusout == true){
-            dropdownOverflow.style.zIndex = -1;
+            setTimeout(() => {
+                if(focusout == true){
+                    dropdownOverflow.style.display = "none";
+                }
+            }, 1000);
         }
     });
 });
+
+
+
+// var dropdownsFull = document.querySelectorAll('.dropdown-full');
+// var dropdownsOverflow = document.querySelectorAll('.dropdown-overflow');
+// var btnsblocks = document.querySelectorAll('.btn-block');
+
+// var focusout = false;
+
+// btnsblocks.forEach(btnsblock => {
+
+//     var btn2 = btnsblock.querySelector('.btn2');
+
+//     const dropdownFull = btnsblock.querySelector('.dropdown-full');
+//     const dropdownOverflow = btnsblock.querySelector('.dropdown-overflow');
+
+//     const dropdownstyle = dropdownFull.getBoundingClientRect();
+//     dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
+//     btn2.addEventListener('focus', () => {
+//         focusout = false;
+//         dropdownOverflow.style.display = "flex";
+//         setTimeout(() => {
+//             dropdownFull.style.top = "0px";
+//         }, 10);
+//     });
+//     console.log(dropdownFull.style.transition);
+//     btn2.addEventListener('focusout', () => {
+//         focusout = true;
+//         dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
+//     });
+//     dropdownFull.addEventListener('transitionend', (e) => {
+//         if(focusout == true){
+//             dropdownOverflow.style.display = "none";
+//         }
+//     });
+// });

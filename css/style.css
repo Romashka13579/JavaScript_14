@@ -6,7 +6,7 @@ body{
 .main{
     display: flex;
     width: 100%;
-    height: 200vh;
+    height: 300vh;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -151,6 +151,7 @@ body{
     background: white;
 }
 
+.btn3,
 .btn2{
     width: 70px;
     height: 70px;
@@ -161,10 +162,12 @@ body{
     background: #439643;
 }
 
+.btn3:hover,
 .btn2:hover{
     outline: 2.5px solid#55d858;
 }
 
+.btn3:focus,
 .btn2:focus{
     outline: 4px solid#83E584;
 }
@@ -174,7 +177,6 @@ body{
     margin-top: 25px;
     display: flex;
     flex-direction: column;
-    z-index: -1;
     overflow: hidden;
 }
 
@@ -182,13 +184,14 @@ body{
     position: relative;
     transition: 0.5s;
     border: 0.8px solid rgb(177, 177, 177);
+    transition: 1s;
 }
 
-.dropdown-full-1{transition: 2.5s;}
+/* .dropdown-full-1{transition: 2.5s;}
 .dropdown-full-2{transition: 0.8s;}
 .dropdown-full-3{transition: 1s;}
 .dropdown-full-4{transition: 1.3s;}
-.dropdown-full-5{transition: 0.5s;}
+.dropdown-full-5{transition: 0.5s;} */
 
 .dropdown-2{
     font-size: 20px;
