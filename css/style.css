@@ -6,8 +6,9 @@ body{
 .main{
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 200vh;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -148,4 +149,47 @@ body{
     height: 15px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
     background: white;
+}
+
+.btn2{
+    width: 70px;
+    height: 70px;
+    padding: 0px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background: #439643;
+}
+
+.btn2:hover{
+    outline: 2.5px solid#55d858;
+}
+
+.btn2:focus{
+    outline: 4px solid#83E584;
+}
+
+.dropdown-overflow{
+    position: absolute;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.dropdown-full{
+    position: relative;
+}
+
+.dropdown-2{
+    font-size: 20px;
+    padding: 10px;
+    background: white;
+}
+
+.line2{
+    height: 0.8px;
+    background: rgb(177, 177, 177);
 }

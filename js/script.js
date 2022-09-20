@@ -46,3 +46,25 @@ btns.forEach(btn => {
         text.style.display = "none";
     });
 });
+
+
+var dropdownFull = document.querySelector('.dropdown-full');
+var dropdownOverflow = document.querySelector('.dropdown-overflow');
+var btns2 = document.querySelectorAll('.btn2');
+
+var dropdownstyle = dropdownFull.getBoundingClientRect();
+
+dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height))+"px";
+
+btns2.forEach(btn2 => {
+    btn2.addEventListener('mouseover', () => {
+        dropdownOverflow.style.zIndex = 1;
+        dropdownFull.style.top = "0px";
+        
+    });
+    btn2.addEventListener('focus', () => {
+        dropdownOverflow.style.zIndex = 1;
+        dropdownFull.style.top = "0px";
+        
+    });
+});
