@@ -49,25 +49,32 @@ btns.forEach(btn => {
 
 var dropdownsFull = document.querySelectorAll('.dropdown-full');
 var dropdownsOverflow = document.querySelectorAll('.dropdown-overflow');
-var btns2 = document.querySelectorAll('.btn2');
+var btnsblocks = document.querySelectorAll('.btn-block');
 
-btns2.forEach(btn2 => {
+var focusout = false;
 
-    const dropdownFull = btn2.querySelector('.dropdown-full');
-    const dropdownOverflow = btn2.querySelector('.dropdown-overflow');
+btnsblocks.forEach(btnsblock => {
+
+    var btn2 = btnsblock.querySelector('.btn2');
+
+    const dropdownFull = btnsblock.querySelector('.dropdown-full');
+    const dropdownOverflow = btnsblock.querySelector('.dropdown-overflow');
 
     const dropdownstyle = dropdownFull.getBoundingClientRect();
-    dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height))+"px";
+    dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
     btn2.addEventListener('focus', () => {
+        focusout = false;
+        dropdownOverflow.style.zIndex = 1;
         dropdownFull.style.top = "0px";
-        setTimeout(() => {
-            dropdownOverflow.style.zIndex = 1;
-        }, dropdownstyle.transition);
     });
+    console.log(dropdownFull.style.transition);
     btn2.addEventListener('focusout', () => {
-        dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height))+"px";
-        setTimeout(() => {
+        focusout = true;
+        dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
+    });
+    dropdownFull.addEventListener('transitionend', (e) => {
+        if(focusout == true){
             dropdownOverflow.style.zIndex = -1;
-        }, dropdownstyle.transition);
+        }
     });
 });
