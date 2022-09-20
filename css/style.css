@@ -184,14 +184,13 @@ body{
     position: relative;
     transition: 0.5s;
     border: 0.8px solid rgb(177, 177, 177);
-    transition: 1s;
 }
 
-/* .dropdown-full-1{transition: 2.5s;}
+.dropdown-full-1{transition: 2.5s;}
 .dropdown-full-2{transition: 0.8s;}
 .dropdown-full-3{transition: 1s;}
 .dropdown-full-4{transition: 1.3s;}
-.dropdown-full-5{transition: 0.5s;} */
+.dropdown-full-5{transition: 0.5s;}
 
 .dropdown-2{
     font-size: 20px;
