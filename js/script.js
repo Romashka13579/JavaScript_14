@@ -73,11 +73,13 @@ btnsblocks.forEach(btnsblock => {
     btn2.addEventListener('focusout', () => {
         focusout = true;
         dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
-    });
-    dropdownFull.addEventListener('transitionend', () => {
         if(focusout == true){
-            dropdownOverflow.style.display = "none";
-        }
+            setTimeout(() => {
+                if(focusout == true){
+                    dropdownOverflow.style.display = "none";
+                }
+            }, 1000);
+        } 
     });
 });
 
@@ -92,21 +94,23 @@ btnsblocks3.forEach(btnsblock3 => {
     const dropdownFull3 = btnsblock3.querySelector('.dropdown-full');
     const dropdownOverflow3 = btnsblock3.querySelector('.dropdown-overflow');
 
+    var btn3 = btnsblock3.querySelector('.btn3');
+
     const dropdownstyle3 = dropdownFull3.getBoundingClientRect();
     dropdownFull3.style.top = ""+(-Math.round(dropdownstyle3.height + 2))+"px";
-    btnsblock3.addEventListener('mouseover', () => {
-        focusout3 = false;
+    btn3.addEventListener('focus', () => {
         dropdownOverflow3.style.display = "flex";
         setTimeout(() => {
             dropdownFull3.style.top = "0px";
         }, 10);
     });
-    btnsblock3.addEventListener('mouseout', () => {
-        focusout3 = true;
+    btn3.addEventListener('focusout', () => {
         dropdownFull3.style.top = ""+(-Math.round(dropdownstyle3.height + 2))+"px";
     });
     dropdownFull3.addEventListener('transitionend', () => {
-        if(dropdownFull3 == true){
+        console.log(dropdownFull3.style.top);
+        console.log(""+(-Math.round(dropdownstyle3.height + 2))+"px");
+        if(dropdownFull3.style.top == ""+(-Math.round(dropdownstyle3.height + 2))+"px"){
             dropdownOverflow3.style.display = "none";
         }
     });
