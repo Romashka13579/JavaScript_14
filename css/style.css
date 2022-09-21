@@ -178,7 +178,7 @@ body{
 .dropdown-overflow{
     position: absolute;
     margin-top: 25px;
-    display: none;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
     transition: 1s;

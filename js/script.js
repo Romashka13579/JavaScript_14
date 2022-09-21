@@ -63,6 +63,7 @@ btnsblocks.forEach(btnsblock => {
 
     const dropdownstyle = dropdownFull.getBoundingClientRect();
     dropdownFull.style.top = ""+(-Math.round(dropdownstyle.height + 2))+"px";
+    dropdownOverflow.style.display = "none";
     btn2.addEventListener('focus', () => {
         focusout = false;
         dropdownOverflow.style.display = "flex";
@@ -94,8 +95,9 @@ btnsblocks3.forEach(btnsblock3 => {
 
     var btn3 = btnsblock3.querySelector('.btn3');
 
-    const dropdownstyle3 = dropdownFull3.getBoundingClientRect();
+    var dropdownstyle3 = dropdownOverflow3.getBoundingClientRect();
     dropdownFull3.style.top = ""+(-Math.round(dropdownstyle3.height + 2))+"px";
+    dropdownOverflow3.style.display = "none";
     btn3.addEventListener('focus', () => {
         dropdownOverflow3.style.display = "flex";
         setTimeout(() => {
@@ -126,17 +128,6 @@ btnsblocks4.forEach(btnsblock4 => {
     var btn4 = btnsblock4.querySelector('.btn4');
     dropdownOverflow4.style.marginTop = "55px";
     btn4.addEventListener('click', () => {
-        // var dropdownOverflows4 = dropdownMenu4.querySelectorAll('.dropdown-overflow');
-        // var dropdownOverflows4 = dropdownMenu4.querySelectorAll('.dropdown-overflow');
-        // dropdownOverflows4.forEach(dropdownOverflow4 => {
-            // dropdownOverflow4.style.marginTop = "55px";
-            // dropdownFull4.style.opacity = 0;
-            // dropdownFull4.addEventListener('transitionend', () => {
-            //     if(parseInt(dropdownOverflow4.style.marginTop) == "55"){
-            //         dropdownOverflow4.style.display = "none";
-            //     }
-            // });
-        // });
         if(click == true){
             click = false;
             dropdownOverflow4.style.marginTop = "55px";
