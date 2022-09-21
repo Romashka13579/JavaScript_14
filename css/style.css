@@ -6,7 +6,7 @@ body{
 .main{
     display: flex;
     width: 100%;
-    height: 300vh;
+    height: 400vh;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -151,6 +151,7 @@ body{
     background: white;
 }
 
+.btn4,
 .btn3,
 .btn2{
     width: 70px;
@@ -162,11 +163,13 @@ body{
     background: #439643;
 }
 
+.btn4:hover,
 .btn3:hover,
 .btn2:hover{
     outline: 2.5px solid#55d858;
 }
 
+.btn4:focus,
 .btn3:focus,
 .btn2:focus{
     outline: 4px solid#83E584;
@@ -178,12 +181,17 @@ body{
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    transition: 1s;
 }
 
 .dropdown-full{
     position: relative;
     transition: 0.5s;
     border: 0.8px solid rgb(177, 177, 177);
+}
+
+.dropdown-full4{
+    opacity: 0;
 }
 
 .dropdown-full-1{transition: 2.5s;}
