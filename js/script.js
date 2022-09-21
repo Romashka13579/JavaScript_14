@@ -117,19 +117,28 @@ btnsblocks3.forEach(btnsblock3 => {
 var dropdownMenu4 = document.querySelector('.dropdown-menu-4');
 var btnsblocks4 = dropdownMenu4.querySelectorAll('.btn-block4');
 
-var focusout4 = false;
-var mouseout4 = false;
-
 btnsblocks4.forEach(btnsblock4 => {
+    var click = false;
+
     const dropdownFull4 = btnsblock4.querySelector('.dropdown-full4');
     const dropdownOverflow4 = btnsblock4.querySelector('.dropdown-overflow');
 
     var btn4 = btnsblock4.querySelector('.btn4');
     dropdownOverflow4.style.marginTop = "55px";
     btn4.addEventListener('click', () => {
-        var dropdownOverflows4 = dropdownMenu4.querySelectorAll('.dropdown-overflow');
-        var dropdownOverflows4 = dropdownMenu4.querySelectorAll('.dropdown-overflow');
-        dropdownOverflows4.forEach(dropdownOverflow4 => {
+        // var dropdownOverflows4 = dropdownMenu4.querySelectorAll('.dropdown-overflow');
+        // var dropdownOverflows4 = dropdownMenu4.querySelectorAll('.dropdown-overflow');
+        // dropdownOverflows4.forEach(dropdownOverflow4 => {
+            // dropdownOverflow4.style.marginTop = "55px";
+            // dropdownFull4.style.opacity = 0;
+            // dropdownFull4.addEventListener('transitionend', () => {
+            //     if(parseInt(dropdownOverflow4.style.marginTop) == "55"){
+            //         dropdownOverflow4.style.display = "none";
+            //     }
+            // });
+        // });
+        if(click == true){
+            click = false;
             dropdownOverflow4.style.marginTop = "55px";
             dropdownFull4.style.opacity = 0;
             dropdownFull4.addEventListener('transitionend', () => {
@@ -137,12 +146,14 @@ btnsblocks4.forEach(btnsblock4 => {
                     dropdownOverflow4.style.display = "none";
                 }
             });
-        });
-        focusout4 = true;
-        dropdownOverflow4.style.display = "flex";
-        setTimeout(() => {
-            dropdownOverflow4.style.marginTop = "25px";
-            dropdownFull4.style.opacity = 1;
-        }, 10);
+        }
+        else if(click == false){
+            click = true;
+            dropdownOverflow4.style.display = "flex";
+            setTimeout(() => {
+                dropdownOverflow4.style.marginTop = "25px";
+                dropdownFull4.style.opacity = 1;
+            }, 1);
+        }
     });
 });
